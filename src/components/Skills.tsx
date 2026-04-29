@@ -1,53 +1,48 @@
-import { Brain, Layers, Cloud, Code } from "lucide-react";
+import { Brain, Layers, Cloud, Code, Bot } from "lucide-react";
 import { RevealOnScroll } from "@/components/RevealOnScroll";
 
 const skillCategories = [
   {
     icon: Brain,
-    title: "Core AI & LLMs",
+    title: "Programming Skills",
     skills: [
-      "Large Language Models",
-      "Prompt Engineering",
-      "RAG Systems",
-      "LangChain / LangGraph",
-      "Fine-tuning (LoRA, PEFT)",
-      "Embeddings & Vector DBs",
+      "Python",
+      "NumPy / Pandas",
+      "Scikit-learn",
+      "PyTorch / TensorFlow",
+      "SQL",
     ],
   },
   {
     icon: Layers,
-    title: "Machine Learning",
+    title: "ML & DL",
     skills: [
-      "PyTorch / TensorFlow",
-      "Computer Vision",
-      "NLP / NLU",
-      "Transformers",
-      "Model Optimization",
-      "Scikit-learn",
+      "Supervised Learning",
+      "Unsupervised Learning",
+      "CNNs (Computer Vision)",
+      "RNNs / LSTMs (Time series & NLP)",
+      "Transformers (BERT, GPT style models)",
     ],
   },
   {
-    icon: Cloud,
-    title: "MLOps & Cloud",
+    icon: Bot,
+    title: "Generative AI",
     skills: [
-      "AWS / GCP",
-      "Docker / Kubernetes",
-      "MLflow / Weights & Biases",
-      "CI/CD Pipelines",
-      "Model Monitoring",
-      "Data Pipelines",
+      "LLMs",
+      "RAG System",
+      "LangChain",
+      "LangGraph",
+      "Agents",
     ],
   },
   {
     icon: Code,
     title: "Backend & APIs",
     skills: [
-      "Python",
       "FastAPI / Flask",
-      "PostgreSQL / Redis",
-      "GraphQL",
-      "Microservices",
-      "System Design",
+      "Docker",
+      "Huggingface",
+      "AWS",
     ],
   },
 ];

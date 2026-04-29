@@ -120,10 +120,10 @@ const Contact = () => {
               {/* Quick Email */}
               <div>
                 <a
-                  href="mailto:alex@example.com"
+                  href="mailto:Amrkhalafalla607@gmail.com"
                   className="inline-flex items-center gap-2 text-primary hover:underline"
                 >
-                  alex@example.com
+                  Amrkhalafalla607@gmail.com
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>

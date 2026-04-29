@@ -4,35 +4,23 @@ import { RevealOnScroll } from "@/components/RevealOnScroll";
 const experiences = [
   {
     type: "work",
-    title: "ML Engineer Intern",
-    company: "AI Startup (YC-backed)",
-    period: "Summer 2024",
+    title: "AI & Data Science Trainee",
+    company: "Digilians Initiative",
+    period: "Dec 2025 – Aug 2026",
     description: [
-      "Architected a RAG system serving 10K+ queries daily with sub-second latency",
-      "Implemented semantic caching reducing API costs by 40%",
-      "Designed evaluation pipelines for LLM output quality monitoring",
+      "Engineered end-to-end Machine Learning, Deep Learning, and NLP workflows spanning from data ingestion to model deployment.",
+      "Architected production-ready RAG systems and NLP pipelines using LangChain and FAISS.",
+      "Implemented diverse predictive modeling solutions using Scikit-Learn, TensorFlow, and PyTorch.",
     ],
   },
   {
     type: "work",
-    title: "Research Assistant",
-    company: "University NLP Lab",
-    period: "2023 – 2024",
+    title: "Public Relations Coordinator",
+    company: "Event Management",
+    period: "Previous Experience",
     description: [
-      "Published paper on efficient fine-tuning methods for domain-specific LLMs",
-      "Developed annotation tools used by 50+ researchers",
-      "Contributed to open-source NLP toolkit with 2K+ GitHub stars",
-    ],
-  },
-  {
-    type: "work",
-    title: "AI Developer (Contract)",
-    company: "Fortune 500 Consulting",
-    period: "2023",
-    description: [
-      "Built document intelligence pipeline processing 100K+ pages monthly",
-      "Delivered POC that secured $2M production contract",
-      "Collaborated with enterprise architects on system integration",
+      "Directed comprehensive event logistics and effectively managed stakeholder communications.",
+      "Formulated strategic planning and execution initiatives.",
     ],
   },
 ];
@@ -40,24 +28,13 @@ const experiences = [
 const education = [
   {
     type: "education",
-    title: "M.S. Computer Science",
-    company: "Stanford University",
-    period: "2023 – 2025 (Expected)",
+    title: "B.S. Artificial Intelligence",
+    company: "Menoufia University",
+    period: "Graduating 2025",
     description: [
-      "Focus: Machine Learning & NLP",
-      "Research: Large Language Models, Efficient Fine-tuning",
-      "Teaching Assistant: CS229 Machine Learning",
-    ],
-  },
-  {
-    type: "education",
-    title: "B.S. Computer Science",
-    company: "UC Berkeley",
-    period: "2019 – 2023",
-    description: [
-      "Graduated with Highest Honors",
-      "Minor in Data Science",
-      "Published undergraduate thesis on neural text generation",
+      "Faculty of Artificial Intelligence",
+      "Overall Grade: Good",
+      "Focused on advanced AI concepts, machine learning, and deep learning architectures.",
     ],
   },
 ];
