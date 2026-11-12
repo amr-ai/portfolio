@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { Send, Github, Linkedin, Mail, ArrowRight } from "lucide-react";
+import { Send, Github, Linkedin, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
 import { RevealOnScroll } from "@/components/RevealOnScroll";
+
+const email = "Amrkhalafalla607@gmail.com";
+const emailHref = `mailto:${email}`;
 
 const socialLinks = [
   {
@@ -14,39 +16,29 @@ const socialLinks = [
   },
   {
     icon: Linkedin,
-    href: "https://www.linkedin.com/in/amr-khalafalla-8a932a3a4/",
+    href: "https://www.linkedin.com/in/amr-mohamed8545/",
     label: "LinkedIn",
   },
   {
     icon: Mail,
-    href: "mailto:amrkhalafalla607@gmail.com",
+    href: emailHref,
     label: "Email",
   },
 ];
 
 const Contact = () => {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const subject = encodeURIComponent(`Portfolio inquiry from ${formData.name}`);
+    const body = encodeURIComponent(`${formData.message}
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    });
-
-    setFormData({ name: "", email: "", message: "" });
-    setIsSubmitting(false);
+Reply to ${formData.email}`);
+    window.location.href = `${emailHref}?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -81,21 +73,6 @@ const Contact = () => {
                 </p>
               </div>
 
-              {/* Availability */}
-              <div className="p-6 rounded-xl gradient-border">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="relative flex h-3 w-3">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
-                  </span>
-                  <span className="font-medium">Currently Available</span>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  Open to full-time opportunities, consulting, and interesting projects
-                  starting July 2025.
-                </p>
-              </div>
-
               {/* Social Links */}
               <div>
                 <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-4">
@@ -117,16 +94,17 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Quick Email */}
-              <div>
-                <a
-                  href="mailto:Amrkhalafalla607@gmail.com"
-                  className="inline-flex items-center gap-2 text-primary hover:underline"
-                >
-                  Amrkhalafalla607@gmail.com
-                  <ArrowRight className="w-4 h-4" />
+              <address className="grid gap-3 not-italic text-muted-foreground">
+                <span>Cairo, Egypt</span>
+                <a href={emailHref} className="inline-flex items-center gap-2 text-primary hover:underline">
+                  <Mail className="w-4 h-4" />
+                  {email}
                 </a>
-              </div>
+                <a href="tel:+201026036443" className="inline-flex items-center gap-2 text-primary hover:underline">
+                  <Phone className="w-4 h-4" />
+                  +20 102 603 6443
+                </a>
+              </address>
             </div>
           </RevealOnScroll>
 
@@ -199,16 +177,9 @@ const Contact = () => {
                 variant="hero"
                 size="lg"
                 className="w-full"
-                disabled={isSubmitting}
               >
-                {isSubmitting ? (
-                  "Sending..."
-                ) : (
-                  <>
-                    Send Message
-                    <Send className="w-4 h-4" />
-                  </>
-                )}
+                Open Email Draft
+                <Send className="w-4 h-4" />
               </Button>
             </form>
           </RevealOnScroll>

@@ -3,40 +3,47 @@ import { RevealOnScroll } from "@/components/RevealOnScroll";
 
 const experiences = [
   {
-    type: "work",
+    title: "AI Engineering Trainee",
+    company: "Sprints",
+    period: "Oct 2026 – Nov 2026",
+    description: [
+      "Completed project-based training in Generative AI and Agentic AI.",
+      "Built a task recommendation agent that uses learner assessments, skill requirements, and task dependencies to explain its recommendations.",
+      "Built a real-time AI meeting assistant with voice processing, conversational AI, and agent orchestration.",
+    ],
+  },
+  {
     title: "AI & Data Science Trainee",
     company: "Digilians Initiative",
     period: "Dec 2025 – Aug 2026",
     description: [
-      "Engineered end-to-end Machine Learning, Deep Learning, and NLP workflows spanning from data ingestion to model deployment.",
-      "Architected production-ready RAG systems and NLP pipelines using LangChain and FAISS.",
-      "Implemented diverse predictive modeling solutions using Scikit-Learn, TensorFlow, and PyTorch.",
+      "Completed project-based training in Machine Learning, Deep Learning, Generative AI, and Data Science.",
+      "Built predictive models, RAG applications, and multi-agent systems.",
+      "Collaborated with cross-functional teams to design, implement, and evaluate AI solutions.",
     ],
   },
   {
-    type: "work",
-    title: "Public Relations Coordinator",
-    company: "Event Management",
-    period: "Previous Experience",
+    title: "Artificial Intelligence Trainee",
+    company: "National Telecommunication Institute (NTI)",
+    period: "Jun 2022 – Aug 2022",
     description: [
-      "Directed comprehensive event logistics and effectively managed stakeholder communications.",
-      "Formulated strategic planning and execution initiatives.",
+      "Completed 90 hours of technical AI training covering machine learning and neural networks.",
+      "Completed 30 hours of professional skills training.",
     ],
   },
 ];
 
-const education = [
-  {
-    type: "education",
-    title: "B.S. Artificial Intelligence",
-    company: "Menoufia University",
-    period: "Graduating 2025",
-    description: [
-      "Faculty of Artificial Intelligence",
-      "Overall Grade: Good",
-      "Focused on advanced AI concepts, machine learning, and deep learning architectures.",
-    ],
-  },
+const education = {
+  title: "Bachelor of Science in Artificial Intelligence",
+  company: "Menoufia University",
+  period: "Jul 2025",
+  description: ["Faculty of Artificial Intelligence"],
+};
+
+const certifications = [
+  { title: "AWS Certified Machine Learning Engineer – Associate", date: "Sep 2026" },
+  { title: "Huawei HCIA-AI", date: "Sep 2026" },
+  { title: "IBM AI Engineering Professional Certificate", date: "Apr 2026" },
 ];
 
 const Experience = () => {
@@ -53,7 +60,7 @@ const Experience = () => {
               Experience
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Where I've <span className="gradient-text">Built</span>
+              Experience &amp; <span className="gradient-text">Education</span>
             </h2>
           </div>
         </RevealOnScroll>
@@ -67,7 +74,7 @@ const Experience = () => {
                 <div className="p-2 rounded-lg bg-primary/10 text-primary">
                   <Briefcase className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-semibold">Work Experience</h3>
+                <h3 className="text-xl font-semibold">Professional Experience</h3>
               </div>
 
               <div className="relative">
@@ -98,11 +105,18 @@ const Experience = () => {
                 <div className="absolute left-2 top-2 bottom-2 w-px bg-border" />
 
                 <div className="space-y-8">
-                  {education.map((edu, index) => (
-                    <TimelineItem key={index} item={edu} />
-                  ))}
+                  <TimelineItem item={education} />
                 </div>
               </div>
+              <h3 className="mt-10 mb-4 text-xl font-semibold">Certifications</h3>
+              <ul className="space-y-3">
+                {certifications.map(({ title, date }) => (
+                  <li key={title} className="flex flex-wrap items-baseline justify-between gap-2 rounded-xl gradient-border p-4">
+                    <span className="font-medium">{title}</span>
+                    <span className="text-sm text-muted-foreground">{date}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </RevealOnScroll>
         </div>

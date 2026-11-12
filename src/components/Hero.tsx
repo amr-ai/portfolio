@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, FileDown } from "lucide-react";
+import { MapPin, FileDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import profilePhoto from "@/assets/profile-photo.png";
@@ -16,15 +16,14 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           {/* Content */}
           <div className="flex-1 text-center lg:text-left">
-            {/* Availability Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8 opacity-0 animate-fade-in">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
-              <Calendar className="w-4 h-4 text-primary" />
+              <MapPin className="w-4 h-4 text-primary" />
               <span className="text-sm text-muted-foreground">
-                Available July 2025 (Post-Graduation)
+                Cairo, Egypt
               </span>
             </div>
 
@@ -38,7 +37,7 @@ const Hero = () => {
 
             {/* Subtitle */}
             <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 opacity-0 animate-slide-up stagger-2">
-              Specializing in Generative AI and RAG-based systems, building scalable ML & DL solutions that bridge research and practical deployment.
+              Specializing in Generative AI and Agentic Systems. I build multi-agent workflows, RAG applications, and real-time AI solutions.
             </p>
 
             {/* CTAs */}
@@ -56,7 +55,6 @@ const Hero = () => {
           </div>
 
           {/* Profile Photo */}
-          {/* Profile Photo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -71,7 +69,7 @@ const Hero = () => {
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary/30 glow-effect">
                 <img
                   src={profilePhoto}
-                  alt="AI Engineer Profile"
+                  alt="Amr Khalafalla"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -82,7 +80,7 @@ const Hero = () => {
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -top-4 -right-4 px-3 py-2 rounded-lg bg-card border border-border text-xs font-mono text-primary"
               >
-                GPT-4 • Claude • Gemini
+                LangGraph • FastAPI
               </motion.div>
 
               <motion.div

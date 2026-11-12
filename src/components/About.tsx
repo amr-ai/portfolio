@@ -1,21 +1,21 @@
-import { Brain, Cpu, Sparkles } from "lucide-react";
+import { Bot, ChartNoAxesCombined, ScanEye } from "lucide-react";
 import { RevealOnScroll } from "./RevealOnScroll";
 
 const highlights = [
   {
-    icon: Brain,
-    title: "RAG & NLP Systems",
-    description: "Building RAG pipelines, Search systems, and conversational AI applications using LangChain and vector databases.",
+    icon: Bot,
+    title: "Generative AI & Agentic Systems",
+    description: "Building intelligent applications with LLMs, RAG pipelines, autonomous agents, and multi-agent orchestration.",
   },
   {
-    icon: Cpu,
-    title: "Computer Vision Systems",
-    description: "Developing real-time vision solutions using deep learning for detection, recognition, and video-based AI applications.",
+    icon: ChartNoAxesCombined,
+    title: "Machine Learning & Data Science",
+    description: "Developing predictive models and data-driven solutions through statistical analysis, feature engineering, and machine learning techniques.",
   },
   {
-    icon: Sparkles,
-    title: "Applied Machine Learning",
-    description: "Designing machine learning solutions from data preprocessing and modeling to APIs and production-ready applications.",
+    icon: ScanEye,
+    title: "Computer Vision & Deep Learning",
+    description: "Applying deep learning to image and video understanding, including object detection, tracking, and visual recognition.",
   },
 ];
 
@@ -24,37 +24,31 @@ const About = () => {
     <section id="about" className="py-24 sm:py-32 relative">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        {/* Section Header */}
         <RevealOnScroll>
           <div className="max-w-3xl mx-auto text-center mb-16">
             <span className="text-primary text-sm font-medium uppercase tracking-widest mb-4 block">
               About Me
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Turning Complex AI Into{" "}
-              <span className="gradient-text">Simple Products</span>
+              Generative AI &amp; <span className="gradient-text">Agentic Systems</span>
             </h2>
           </div>
         </RevealOnScroll>
 
         {/* Story Section */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <RevealOnScroll delay={0.2}>
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm Amr, an AI engineer obsessed with building systems that actually work
-                in the real world. While many focus on chasing benchmarks, I focus on
-                shipping products that solve real problems.
+                I'm an AI Engineer based in Cairo, Egypt, with a strong focus on Generative AI,
+                Agentic Systems, and Machine Learning. I enjoy turning complex AI concepts into
+                practical solutions that solve real-world problems.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                My journey started with a fascination for how machines can understand
-                language. Today, I specialize in building LLM-powered applications—from
-                RAG systems that make enterprise knowledge accessible, to intelligent
-                agents that automate complex workflows.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                I believe the best AI systems are invisible. Users shouldn't marvel
-                at the technology—they should marvel at how effortless their work has become.
+                My expertise spans developing intelligent agents, working with large language models,
+                building machine learning solutions, and applying deep learning to real-world challenges.
+                I focus on combining AI capabilities with solid software engineering to create reliable,
+                efficient, and scalable applications.
               </p>
             </div>
           </RevealOnScroll>
@@ -87,24 +81,6 @@ const About = () => {
           </RevealOnScroll>
         </div>
 
-        {/* Stats */}
-        <RevealOnScroll delay={0.6}>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-12 border-t border-border">
-            {[
-              { value: "3+", label: "Years Experience" },
-              { value: "12+", label: "Projects Shipped" },
-              { value: "5M+", label: "API Calls/Month" },
-              { value: "99.9%", label: "System Uptime" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold gradient-text mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </RevealOnScroll>
       </div>
     </section>
   );

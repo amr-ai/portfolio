@@ -9,12 +9,12 @@ const Footer = () => {
             <span className="text-xl font-bold gradient-text">AK</span>
             <span className="text-muted-foreground">|</span>
             <span className="text-sm text-muted-foreground">
-              AI Engineer
+              AI Engineer · Generative AI &amp; Agentic Systems
             </span>
           </div>
 
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Amr Khalafalla. Built with precision.
+            © {currentYear} Amr Khalafalla
           </p>
         </div>
       </div>
